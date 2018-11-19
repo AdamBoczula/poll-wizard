@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/Wizardries/poll-wizard.svg?branch=master)](https://travis-ci.org/Wizardries/poll-wizard)
+[![dependencies Status](https://david-dm.org/maxogden/dependency-check/status.svg)](https://travis-ci.org/Wizardries/poll-wizard)
+[![Known Vulnerabilities](https://snyk.io/test/github/Wizardries/poll-wizard/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Wizardries/poll-wizard?targetFile=package.json)
+
 # PollWizard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
