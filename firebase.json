@@ -14,7 +14,7 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "dist/poll-wizard",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
