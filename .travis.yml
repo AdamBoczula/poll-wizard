@@ -16,10 +16,6 @@ language: node_js
 node_js:
   - 8.9
 
-branches:
-  only:
-    - master
-
 before_script:
   - set -e
   - export DISPLAY=:99.0
@@ -38,6 +34,8 @@ deploy:
     token:
       secure: $FIREBASE_TOKEN
     project: "poll-wizard"
+#    on:
+#      branch: master
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
