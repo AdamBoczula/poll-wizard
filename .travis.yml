@@ -34,8 +34,8 @@ deploy:
     token:
       secure: $FIREBASE_TOKEN
     project: "poll-wizard"
-#    on:
-#      branch: master
+    on:
+      branch: master
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
