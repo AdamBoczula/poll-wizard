@@ -1,27 +1,25 @@
+[![Build Status](https://travis-ci.org/Wizardries/poll-wizard.svg?branch=master)](https://travis-ci.org/Wizardries/poll-wizard)
+[![dependencies Status](https://david-dm.org/maxogden/dependency-check/status.svg)](https://travis-ci.org/Wizardries/poll-wizard)
+[![Known Vulnerabilities](https://snyk.io/test/github/Wizardries/poll-wizard/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Wizardries/poll-wizard?targetFile=package.json)
+
 # PollWizard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
-## Development server
+# Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. `Firebase` requires `Node.js 8.x.x` until [issue](https://github.com/mapbox/node-pre-gyp/issues/381) with `node-pre-gyp` will be solved.
+ 
+2. Install `Angular CLI` by running `npm install -g @angular/cli`.
 
-## Code scaffolding
+3. Install `Firebase Tools` by running `npm install -g firebase-tools`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Starting project
 
-## Build
+To start the project, simply run `npm start`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+# Testing
 
-## Running unit tests
+1. Unit tests: `npm test` for single pass or `npm run test:watch` for running tests with watching flag
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+2. e2e tests: `npm run e2e`

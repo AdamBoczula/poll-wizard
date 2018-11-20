@@ -1,0 +1,51 @@
+#.travis.yml
+
+sudo: required
+
+dist: trusty
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+language: node_js
+
+node_js:
+  - 8.9
+
+branches:
+  only:
+    - master
+
+before_script:
+  - set -e
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - npm install -g --silent firebase-tools
+  - npm install -g --silent @angular/cli
+
+script:
+  - npm run lint
+  - npm run test:ci
+  - npm run e2e
+  - npm run build:ci
+
+deploy:
+  - provider: firebase
+    token:
+      secure: $FIREBASE_TOKEN
+    project: "poll-wizard"
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: dist
+    on:
+      branch: master
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change

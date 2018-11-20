@@ -9,6 +9,10 @@
 # dependencies
 /node_modules
 
+# firebase
+/.firebase
+/functions/node_modules
+
 # IDEs and editors
 /.idea
 .project
