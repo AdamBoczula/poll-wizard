@@ -4,6 +4,7 @@ import {NgModule} from '@angular/core';
 import {AngularFireModule} from '@angular/fire';
 
 import {AppRoutingModule} from './app-routing.module';
+import {AppUiModule} from './app-ui/app-ui.module';
 import {AppComponent} from './app.component';
 
 import {environment} from '../environments/environment';
@@ -15,6 +16,7 @@ import {environment} from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AppUiModule,
     AngularFireModule.initializeApp(environment.firebase, 'poll-wizard'),
   ],
   providers: [],
