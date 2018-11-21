@@ -1,18 +1,14 @@
 #.travis.yml
 
 sudo: required
-
 dist: trusty
-
 addons:
   apt:
     sources:
       - google-chrome
     packages:
       - google-chrome-stable
-
 language: node_js
-
 node_js:
   - 8.9
 
@@ -39,7 +35,7 @@ deploy:
   - provider: pages
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
-    local_dir: dist
+    local_dir: dist/poll-wizard
     on:
       branch: master
 

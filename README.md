@@ -23,3 +23,7 @@ To start the project, simply run `npm start`.
 1. Unit tests: `npm test` for single pass or `npm run test:watch` for running tests with watching flag
 
 2. e2e tests: `npm run e2e`
+
+# Firebase deployment
+
+Deployed app is available under: [https://poll-wizard.firebaseapp.com/](https://poll-wizard.firebaseapp.com/)
