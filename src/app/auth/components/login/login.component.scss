@@ -1,0 +1,22 @@
+.login-container,
+.login-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-color: black;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+button {
+  font-size: 14px;
+}
+
+mat-divider {
+  color: #c1b5b4;
+  border-color: #c1b5b4;
+}

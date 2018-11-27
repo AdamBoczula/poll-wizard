@@ -1,11 +1,8 @@
-import {
-  ActionReducerMap,
-  MetaReducer
-} from '@ngrx/store';
-import {storeFreeze} from 'ngrx-store-freeze';
+import { ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { storeFreeze } from 'ngrx-store-freeze';
 
-import {environment} from '../../environments/environment';
-import {authReducer, AuthState} from '../auth/auth.reducer';
+import { environment } from '../../environments/environment';
+import { authReducer, AuthState } from '../auth/reducers/auth.reducer';
 
 export interface AppState {
   auth: AuthState;
@@ -15,5 +12,4 @@ export const reducers: ActionReducerMap<AppState> = {
   auth: authReducer
 };
 
-export const metaReducers: MetaReducer<AppState>[] =
-  !environment.production ? [storeFreeze] : [];
+export const metaReducers: MetaReducer<AppState>[] = !environment.production ? [storeFreeze] : [];

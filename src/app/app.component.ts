@@ -1,5 +1,4 @@
-import {Component} from '@angular/core';
-import * as R from 'ramda';
+import { Component } from '@angular/core';
 import {User} from 'firebase';
 import {Store} from '@ngrx/store';
 
@@ -14,7 +13,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = R.toUpper('poll-wizard');
+  title = 'Pool wizard';
 
   constructor(
     private store: Store<AppState>,

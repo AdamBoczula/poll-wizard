@@ -1,0 +1,17 @@
+.app-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #202020;
+
+  > h1 {
+    font-size: 22px;
+    font-family: 'Pacifico', cursive;
+    padding-left: 0.25em;
+  }
+}
+
+mat-divider {
+  color: black;
+  border-color: black;
+}

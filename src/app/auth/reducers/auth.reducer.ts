@@ -1,6 +1,6 @@
-import {User} from 'firebase';
+import { User } from 'firebase';
 
-import {AuthActions, AuthActionTypes} from './auth.actions';
+import { AuthActions, AuthActionTypes } from '../auth.actions';
 
 export interface AuthState {
   isLoggedIn: boolean;

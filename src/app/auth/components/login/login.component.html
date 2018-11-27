@@ -1,0 +1,26 @@
+<div class="login-container">
+  <h1>Sign in</h1>
+  <form class="login-form" #loginForm="ngForm" (submit)="onLoginFormSubmit(loginForm.value, loginForm.valid)">
+    <mat-form-field>
+      <input matInput name="email" placeholder="Enter your email" type="email" value="" ngModel required email />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="password" placeholder="Enter your password" [type]="showPassword ? 'text' : 'password'" value="" minlength="4" ngModel
+        required MinLengthValidator ng-hide="false" />
+      <button mat-icon-button matSuffix (click)="showPassword = !showPassword">
+        <mat-icon>{{showPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-checkbox name="rememberMe" ngModel>Remember me</mat-checkbox>
+    <a routerLink="/login" routerLinkActive="active">Forgot password?</a>
+    <button mat-flat-button isRoundButton color="primary">SIGN IN</button>
+  </form>
+  <mat-divider inSet></mat-divider>OR<mat-divider inSet></mat-divider>
+  <button mat-flat-button isRoundButton color="primary" (click)="loginWithExternalProvider(authenticationProviders.Facebook)">
+    <mat-icon matPrefix>delete</mat-icon>SIGN IN WITH FACEBOOK
+  </button>
+  <button mat-flat-button isRoundButton color="warn" (click)="loginWithExternalProvider(authenticationProviders.Google)">
+    <mat-icon matPrefix>delete</mat-icon>SIGN IN WITH GOOGLE
+  </button>
+  <div>Don't have an account? <a routerLink="/login" routerLinkActive="active">Create an account</a></div>
+</div>
