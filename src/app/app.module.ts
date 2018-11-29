@@ -8,6 +8,9 @@ import {AppUiModule} from './app-ui/app-ui.module';
 import {AppComponent} from './app.component';
 
 import {environment} from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,8 @@ import {environment} from '../environments/environment';
     AppRoutingModule,
     AppUiModule,
     AngularFireModule.initializeApp(environment.firebase, 'poll-wizard'),
+    StoreModule.forRoot(reducers, { metaReducers }),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
   providers: [],
   bootstrap: [AppComponent]

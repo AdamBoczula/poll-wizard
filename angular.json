@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "poll-wizard"
+  "defaultProject": "poll-wizard",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
