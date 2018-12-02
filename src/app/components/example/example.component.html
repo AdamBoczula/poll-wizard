@@ -1,0 +1,15 @@
+<h2>NgRX examples: </h2>
+<ul>
+  <li>
+    <button (click)="exampleLogin()">LOGIN EXAMPLE</button>
+  </li>
+  <li>
+    <button (click)="exampleLogout()">LOGOUT EXAMPLE</button>
+  </li>
+  <li>
+    Is logged in: {{ isLoggedIn$ | async }}
+  </li>
+  <li>
+    Is logged out: {{ isLoggedOut$ | async }}
+  </li>
+</ul>

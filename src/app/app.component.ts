@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import * as R from 'ramda';
+import {RoutePaths} from './routing/routes';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,8 @@ import * as R from 'ramda';
 })
 export class AppComponent {
   title = R.toUpper('poll-wizard');
+  routePaths = RoutePaths;
+
+  constructor() {
+  }
 }
