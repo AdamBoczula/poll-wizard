@@ -13,6 +13,7 @@ import {AuthModule} from './auth/auth.module';
 import {environment} from '../environments/environment';
 import {reducers, metaReducers} from './reducers';
 import { ExampleComponent } from './components/example/example.component';
+import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { ExampleComponent } from './components/example/example.component';
     BrowserModule,
     AppRoutingModule,
     AppUiModule,
-    AuthModule,
     AngularFireModule.initializeApp(environment.firebase, environment.projectName),
     StoreModule.forRoot(reducers, {metaReducers}),
+    EffectsModule.forRoot([]),
+    AuthModule.forRoot(),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production
     })
