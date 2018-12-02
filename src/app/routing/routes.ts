@@ -1,13 +1,15 @@
 import {Routes} from '@angular/router';
 import {ExampleComponent} from '../components/example/example.component';
-
-export enum RoutePaths {
-  ExamplePage = 'example'
-}
+import {AuthGuard} from '../guards/auth.guard';
 
 export const routes: Routes = [
   {
-    path: RoutePaths.ExamplePage,
-    component: ExampleComponent
+    path: 'example',
+    component: ExampleComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];

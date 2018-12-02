@@ -1,15 +1,12 @@
-<h2>NgRX examples: </h2>
-<ul>
-  <li>
-    <button (click)="exampleLogin()">LOGIN EXAMPLE</button>
-  </li>
-  <li>
-    <button (click)="exampleLogout()">LOGOUT EXAMPLE</button>
-  </li>
-  <li>
-    Is logged in: {{ isLoggedIn$ | async }}
-  </li>
-  <li>
-    Is logged out: {{ isLoggedOut$ | async }}
-  </li>
-</ul>
+<div style="background-color: aliceblue">
+  <h2>Example component:</h2>
+  <ul>
+    <li>
+      Is logged in: <strong>{{ isLoggedIn$ | async }}</strong>
+    </li>
+    <li>
+      Is logged out: <strong>{{ isLoggedOut$ | async }}</strong>
+    </li>
+  </ul>
+  <button (click)="exampleLogout()">Logout Example Action</button>
+</div>

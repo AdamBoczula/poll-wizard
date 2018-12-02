@@ -1,22 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {
-  StoreRouterConnectingModule,
-  routerReducer,
-  StoreRouterConfig,
-  NavigationActionTiming
-} from '@ngrx/router-store';
 import {StoreModule} from '@ngrx/store';
+import {NavigationActionTiming, routerReducer, StoreRouterConfig, StoreRouterConnectingModule} from '@ngrx/router-store';
 
-import {CustomRouteSerializer} from './custom-route-serializer';
 import {routes} from './routes';
+import {CustomRouteSerializer} from './custom-route-serializer';
 
 @NgModule({
   imports: [
-    StoreModule.forRoot({
-      router: routerReducer,
-    }),
     RouterModule.forRoot(routes),
+    StoreModule.forFeature('router', routerReducer),
     StoreRouterConnectingModule.forRoot(<StoreRouterConfig>{
       stateKey: 'router',
       serializer: CustomRouteSerializer,
