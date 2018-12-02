@@ -376,6 +376,14 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.11.tgz#32a853fad9974cbbc9fc766ec5699a18b22ccee6"
   integrity sha512-WyMXDxk/WZ+f2lOCeEvDWUce2f5Kk2sNfvArK8f+PlUnzFdy/MBzLXrmbMgyZXP7GP4ooUxYV8Sdmoh1hGk1Uw==
 
+"@grpc/grpc-js@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-0.3.2.tgz#8adcf22154bfd4a0903296d6656420c2ff86e388"
+  integrity sha512-vvcC4EZwS2kzEuwe3zmExi20YM1tqO+L/xdpzInze0WnRfhwbssDfLtMfAyAPQaL2CD8dRZLCOVLbsSdF1KVjA==
+  dependencies:
+    lodash "^4.17.4"
+    semver "^5.5.0"
+
 "@ngrx/effects@^7.0.0-beta.0":
   version "7.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-7.0.0-beta.0.tgz#b3985513f994d40f7c101ffc93d67e8ddb5537c7"

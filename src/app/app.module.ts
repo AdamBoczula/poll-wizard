@@ -12,7 +12,7 @@ import {AuthModule} from './auth/auth.module';
 
 import {environment} from '../environments/environment';
 import {reducers, metaReducers} from './reducers';
-import { ExampleComponent } from './components/example/example.component';
+import {ExampleComponent} from './components/example/example.component';
 import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
@@ -32,7 +32,8 @@ import {EffectsModule} from '@ngrx/effects';
       logOnly: environment.production
     })
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
