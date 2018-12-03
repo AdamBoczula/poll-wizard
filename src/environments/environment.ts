@@ -6,6 +6,7 @@ import {firebase} from './firebase';
 
 export const environment = {
   production: false,
+  projectName: 'poll-wizard',
   firebase
 };
 

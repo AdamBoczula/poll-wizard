@@ -1,0 +1,12 @@
+<div style="background-color: aliceblue">
+  <h2>Example component:</h2>
+  <ul>
+    <li>
+      Is logged in: <strong>{{ isLoggedIn$ | async }}</strong>
+    </li>
+    <li>
+      Is logged out: <strong>{{ isLoggedOut$ | async }}</strong>
+    </li>
+  </ul>
+  <button (click)="exampleLogout()">Logout Example Action</button>
+</div>
