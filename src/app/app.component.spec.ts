@@ -1,9 +1,16 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import {TestBed, async} from '@angular/core/testing';
+import {RouterTestingModule} from '@angular/router/testing';
+import {AppComponent} from './app.component';
+import {Store} from '@ngrx/store';
+import {Router} from '@angular/router';
+import {ExampleService} from './services/example.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
+    const store = {};
+    const router = {};
+    const exampleService = {};
+
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
@@ -11,6 +18,11 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      providers: [
+        {provide: Store, useValue: store},
+        {provide: Router, useValue: router},
+        {provide: ExampleService, useValue: exampleService}
+      ]
     }).compileComponents();
   }));
 
